@@ -17,3 +17,9 @@ jobs:
         run: |
           echo "Good"
           echo "Morning"
+          
+      - name: 작업폴더가 무엇인지 출력
+        run: pwd
+          
+      - name: 작업폴더 목록 확인
+        run: ls -la
