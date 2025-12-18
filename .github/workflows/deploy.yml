@@ -13,11 +13,19 @@ env:
 jobs:
   my-Deploy-Job:
     runs-on: ubuntu-latest
+  
+  my-Deploy-job2
+    name: 배포작업
+    runs-on" self-hosted
 
+    
     steps: 
       - name: Hello World 찍기 # Step에 이름 붙이는 기능
         run: echo "Hello World" # 실행시킬 명령어 작성
-        
+      
+      - name: 배포작업 1ㄱ단단계 파일생성
+        run: echo "hellow World" > output.txt
+
       - name: 여러 명령어 문장 작성하기
         run: |
           echo "Good"
@@ -42,3 +50,4 @@ jobs:
           
           echo "USER_PASSWORD = ${{ secrets.USER_PASSWORD }}"
 
+      
