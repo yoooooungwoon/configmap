@@ -4,7 +4,11 @@ on:
   push:
     branches:
     - main
-
+env:
+  NAME: kosa
+  USERNAME: kosa
+  
+      
 jobs:
   my-Deploy-Job:
     runs-on: ubuntu-latest
@@ -26,3 +30,9 @@ jobs:
 
       - name: 환경 변수 모두 출력
         run: env
+
+      - name: 환경변수 name 출력
+        run: echo ${{env.NAME }}
+      - name: 환경변수 name 출력
+        run: echo ${{env.USERNAME }}
+
